@@ -1,5 +1,5 @@
-# source 'https://rubygems.org'
-source 'http://gems.github.com'
+source 'https://rubygems.org'
+# source 'http://gems.github.com'
 ruby '2.1.2'
 
 gem "middleman", "~>3.3.6"

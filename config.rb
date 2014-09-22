@@ -51,6 +51,7 @@ end
 # Gem
 ###
 require 'slim'
+Slim::Engine.disable_option_validator!
 
 set :css_dir, 'stylesheets'
 
@@ -72,8 +73,22 @@ configure :build do
   # activate :asset_hash
 
   # Use relative URLs
-  # activate :relative_assets
+  activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+end
+
+activate :bootstrap_navbar do |bootstrap_navbar|
+  bootstrap_navbar.bootstrap_version = '3.2.0.2'
+end
+
+# Asset pipeline
+require 'bootstrap-sass'
+activate :sprockets
+
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+  config.cascade  = false
+  config.inline   = true
 end

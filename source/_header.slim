@@ -7,17 +7,16 @@ nav.navbar.navbar-default role="navigation"
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand href="#" アダ街！学生文化祭
-      
+      == link_to "アダ街！学生文化祭", '/index.html', :class => 'navbar-brand'
     .collapse.navbar-collapse id="bs-example-navbar-collapse-1"
       ul.nav.navbar-nav.navbar-right
         li
-          a href="#" イベント一覧
+          == link_to "イベント一覧", '/eventlist.html'
         li
-          a href="#" 参加店舗一覧 
+          == link_to "参加店舗一覧", '/shoplist.html'
         li
-          a href="#" マップ
+          == link_to 'イベントマップ', '/map.html'
         li
-          a href="#" 協賛企業
+          == link_to '協賛企業', '/sponsor.html'
         li
-          a href="#" 参加団体・委員会募集中
+          == link_to '参加団体・委員会絶賛募集中', '/recruit.html'

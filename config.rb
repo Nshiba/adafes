@@ -85,7 +85,6 @@ end
 
 # Asset pipeline
 require 'bootstrap-sass'
-activate :sprockets
 
 activate :autoprefixer do |config|
   config.browsers = ['last 2 versions', 'Explorer >= 9']

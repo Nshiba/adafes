@@ -14,7 +14,7 @@ html
     == javascript_include_tag  "all"
 
   body class="#{page_classes}"
-  == partial "header"
-  .container
-    == yield
-  == partial "footer"
+    == partial "header"
+    .container
+      == yield
+    == partial "footer"

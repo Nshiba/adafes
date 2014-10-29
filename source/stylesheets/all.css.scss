@@ -1,10 +1,16 @@
 @charset "utf-8";
+$base: #FF934B;
+$second: white;
+$thred: #222222;
+$green: #CAE075;
+$green2: #9ab955;
+
 @import "bootstrap";
+@import "compass";
 
 body {
-  background: #d4d4d4 url("../images/background.png");
+  background-color: $second;
   text-align: center;
-  font-family: sans-serif;
 }
 
 p {
@@ -23,7 +29,9 @@ section{
 }
 
 h1 {
-  color: rgba(0, 0, 0, .3);
+  color: $thred;
+  opacity: 0.7;
+  background: $base;
   font-weight: bold;
   font-size: 32px;
   letter-spacing: -1px;
@@ -33,26 +41,82 @@ h1 {
   margin: 0;
 }
 
-section#hold { 
-  .hold-date {
-    font-size: 32px;
+h2 {
+  color: $thred;
+  opacity: 0.9;
+  font-weight: bold;
+  font-size: 32px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  padding: 10px 0 10px;
+  margin: 0;
+}
+
+// header
+nav{
+  li,a {
+    &:hover,&:focus{
+      background-color: $green2 !important;
+      opacity: 0.7;
+    }
+  }
+}
+.navbar-default {
+  background-color: $green; 
+  button {
+    &:hover,&:active,&:focus {
+      background-color: $green2 !important;
+    }
   }
 }
 
-.doc {
-  font-size: 14px;
-  margin: 0;
-  &:before,
-  &:after {
-    opacity: .2;
-    padding: 6px;
-    font-style: normal;
-    position: relative;
-    content: "•";
+section {
+  border-style: solid;
+  border-width: 1px; 
+}
+
+#hold { 
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: $base;
+  opacity: 0.7;
+  .hold-date {
+    opacity: 1;
+    font-size: 12px;
+    font-weight: bold;
   }
-  a {
-  color: rgba(0, 0, 0, 0.3); }
-  &:hover {
-    color: #666;
+}
+
+// footer
+footer{
+  bottom: 0;
+  margin: 5px 0;
+  border: 2px;
+  background: $green;
+}
+
+.top {
+  img {
+    width: 80%;
+    /* height: 100%; */
+    border-left: 20px;
+    border-right: 20px;
   }
+  p {
+    font-size: 12px;
+  }
+}
+
+#shop {
+  img{
+    width: 400px;
+    height: 400px;
+  }
+}
+
+.top-img {
+  @include clearfix;
+  /* position: absolute; */
 }

@@ -15,7 +15,6 @@ html{
 
 body {
   background-color: $second;
-  text-align: center;
   height: 100%;
 }
 
@@ -25,38 +24,13 @@ p {
 }
 
 header {
-  font-size: 36px;
+  font-size: 14px;
   font-weight: bold;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
 }
 
 section{
   overflow: auto;
-}
-
-h1 {
-  color: $thred;
-  opacity: 0.7;
-  background: $base;
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  padding: 10px 0 10px;
-  margin: 0;
-}
-
-h2 {
-  color: $thred;
-  opacity: 0.9;
-  font-weight: bold;
-  font-size: 32px;
-  letter-spacing: -1px;
-  text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-  padding: 10px 0 10px;
-  margin: 0;
 }
 
 // header
@@ -68,6 +42,7 @@ nav{
     }
   }
 }
+
 .navbar-default {
   background-color: $green; 
   button {
@@ -78,22 +53,25 @@ nav{
 }
 
 section {
-  border-style: solid;
-  border-width: 1px; 
+
 }
 
 // footer
-footer{
+.footer {
   background: $green;
-  border: 2px;
-  bottom: 0;
-  margin: 5px 0;
+  font-size: 11px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  p {
+    margin: auto;
+  }
 }
 
 .top-img {
   background: url('../images/a2.jpg') no-repeat fixed center 0 / cover transparent;
   display: block;
-  min-height: 100%;
+  min-height: 60%;
   width: 100%;
 }
 
@@ -105,4 +83,7 @@ footer{
 
 .navbar {
   margin: 0 0;
+}
+
+#top {
 }

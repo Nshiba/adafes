@@ -3,14 +3,20 @@ $base: #FF934B;
 $second: white;
 $thred: #222222;
 $green: #CAE075;
+$green: #eeeeee;
 $green2: #9ab955;
 
 @import "bootstrap";
 @import "compass";
 
+html{
+  height: 100%;
+}
+
 body {
   background-color: $second;
   text-align: center;
+  height: 100%;
 }
 
 p {
@@ -76,47 +82,27 @@ section {
   border-width: 1px; 
 }
 
-#hold { 
-  margin-bottom: 10px;
-  border-style: solid;
-  border-width: 1px;
-  background-color: $base;
-  opacity: 0.7;
-  .hold-date {
-    opacity: 1;
-    font-size: 12px;
-    font-weight: bold;
-  }
-}
-
 // footer
 footer{
+  background: $green;
+  border: 2px;
   bottom: 0;
   margin: 5px 0;
-  border: 2px;
-  background: $green;
-}
-
-.top {
-  img {
-    width: 80%;
-    /* height: 100%; */
-    border-left: 20px;
-    border-right: 20px;
-  }
-  p {
-    font-size: 12px;
-  }
-}
-
-#shop {
-  img{
-    width: 400px;
-    height: 400px;
-  }
 }
 
 .top-img {
-  @include clearfix;
-  /* position: absolute; */
+  background: url('../images/a2.jpg') no-repeat fixed center 0 / cover transparent;
+  display: block;
+  min-height: 100%;
+  width: 100%;
+}
+
+.main-title{
+  margin-top: 5%;
+  color: #fff;
+  font-size: 40px;
+}
+
+.navbar {
+  margin: 0 0;
 }

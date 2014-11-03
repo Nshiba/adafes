@@ -1,4 +1,12 @@
 ---
 title: イベント一覧
 ---
-h1 イベント一覧
+.container
+  h1 イベント一覧
+  - data.event.list.each do |v|
+    .row.event
+      a.col-md-4 href=v.url
+        img.img-responsive.img-rounded src=v.image
+      .col-md-8
+        h4 = v.name
+        p = v.text

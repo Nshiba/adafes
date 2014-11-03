@@ -1,5 +1,12 @@
 ---
 title: 参加店舗一覧
 ---
-
-h1 参加店舗一覧はこちら
+.container
+  h1 参加店舗
+  - data.shop.list.each do |v|
+    .row.shop
+      a.col-md-4 href=v.url
+        img.img-responsive.img-rounded src=v.image
+      .col-md-8
+        h4 = v.name
+        p = v.text

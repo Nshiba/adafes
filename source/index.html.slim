@@ -22,9 +22,8 @@ section.top-img
     section#recruit
       h2 協賛
       ul.list-group
-        li.list-group-item 株式会社CAN
-        li.list-group-item CROSS WAVE SNEJU
-        li.list-group-item 足立経済新聞
+      - data.recruit.each do |v|
+        == link_to v.name, v.url, class: 'list-group-item', target: '_blank'
 
     section#info
       p 2015年1月31日(土) 2月1日(日)

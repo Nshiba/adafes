@@ -1,12 +1,12 @@
 ---
 title: 参加店舗一覧
 ---
-.container
+.container#shop
   h1 参加店舗
   - data.shop.list.each do |v|
-    .row.shop
+    .row.shop-item
+      h3 = v.name
       a.col-md-4 href=v.url
         img.img-responsive.img-rounded src=v.image
       .col-md-8
-        h4 = v.name
         p = v.text

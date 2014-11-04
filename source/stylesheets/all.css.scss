@@ -86,11 +86,27 @@ section {
 #top {
 }
 
-.shop { 
-  margin-bottom: 5px;
+@mixin responsive-img-size {
+  img {
+    width: 420px;
+    height: 200px;
+  }
+  @media (min-width: $screen-sm-min) {
+    img {
+      height: 280px;
+    }
+  }
+}
+
+#shop {
+  .shop-item { 
+    @include responsive-img-size;
+    margin-bottom: 5px;
+  }
 }
 
 #event {
+  @include responsive-img-size;
   h1,h2,h3,h4,h5,h6 {
     margin: {
       top: 5px;
@@ -106,10 +122,6 @@ section {
   .event-sub {
     margin: 2px 0;
   }
-  img {
-    width: 420px;
-    height: 200px;
-  }
   .event-item {
     margin: 15px 0 25px;
     display: block;
@@ -120,11 +132,6 @@ section {
 @media (min-width: $screen-sm-min) {
   body {
     font-size: 16px;
-  }
-  #event {
-    img {
-      height: 280px;
-    }
   }
 }
 

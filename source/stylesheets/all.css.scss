@@ -16,6 +16,7 @@ html{
 body {
   background-color: $second;
   height: 100%;
+  font-size: 15px;
 }
 
 header {
@@ -92,4 +93,26 @@ section {
 
 .shop { 
   margin-bottom: 5px;
+}
+
+#event {
+  img {
+    width: 360px;
+    height: 300px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
 }

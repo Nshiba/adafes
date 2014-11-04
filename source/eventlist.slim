@@ -4,11 +4,13 @@ title: イベント一覧
 .container#event
   h1 イベント一覧
   - data.event.list.each do |v|
-    .row.event
-      .col-md-4
+    .row.event-item
+      .event-sub
+        h4 = v.sub
+      .evnet-name
+        h3 = v.name
+      .col-md-5
         img.img-responsive.img-rounded src=v.image
-      .col-md-8
-        h5 = v.sub
-        h4 = v.name
+      .col-md-7
         p = v.text
 

@@ -17,6 +17,7 @@ body {
   background-color: $second;
   height: 100%;
   font-size: 15px;
+  line-height: 1.8em;
 }
 
 header {
@@ -60,6 +61,7 @@ section {
   height: 30px;
   text-align: center;
   p {
+    padding: auto;
     margin: auto;
   }
 }
@@ -84,21 +86,33 @@ section {
 #top {
 }
 
-.media {
-  img {
-    width: 300px;
-    height: auto;
-  }
-}
-
 .shop { 
   margin-bottom: 5px;
 }
 
 #event {
+  h1,h2,h3,h4,h5,h6 {
+    margin: {
+      top: 5px;
+      bottom: 5px;
+    }
+  }
+  .event-name {
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+  }
+  .event-sub {
+    margin: 2px 0;
+  }
   img {
-    width: 360px;
-    height: 300px;
+    width: 420px;
+    height: 280px;
+  }
+  .event-item {
+    margin: 15px 0 25px;
+    display: block;
   }
 }
 

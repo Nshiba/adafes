@@ -9,6 +9,18 @@ $green2: #9ab955;
 @import "bootstrap";
 @import "compass";
 
+@mixin responsive-img-size {
+  img {
+    width: 420px;
+    height: 200px;
+  }
+  @media (min-width: $screen-sm-min) {
+    img {
+      height: 280px;
+    }
+  }
+}
+
 html{
   height: 100%;
 }
@@ -32,25 +44,16 @@ section{
 
 // header
 nav{
-  li,a {
-    &:hover,&:focus{
-      background-color: $green2 !important;
-      opacity: 0.7;
-    }
-  }
+
 }
 
 .navbar-default {
-  background-color: $green; 
   button {
-    &:hover,&:active,&:focus {
-      background-color: $green2 !important;
-    }
   }
 }
 
-section {
-
+.navbar {
+  margin: 0 0;
 }
 
 // footer
@@ -79,24 +82,9 @@ section {
   font-size: 40px;
 }
 
-.navbar {
-  margin: 0 0;
-}
-
 #top {
 }
 
-@mixin responsive-img-size {
-  img {
-    width: 420px;
-    height: 200px;
-  }
-  @media (min-width: $screen-sm-min) {
-    img {
-      height: 280px;
-    }
-  }
-}
 
 #shop {
   .shop-item { 

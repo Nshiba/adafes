@@ -2,27 +2,12 @@
 $base: white;
 $back: #EBEEED;
 $nav: #32393D;
+$line: #EC6A47;
 
 @import "bootstrap";
 @import "compass";
 
-@mixin responsive-img-size {
-  img {
-    height: 200px;
-    width: 100%;
-  }
-  @media (min-width: $screen-sm-min) {
-    img {
-      height: 320px;
-    }
-  }
-  @media (min-width: $screen-md-min) {
-    img{
-      width: 420px;
-      height: 280px;
-    }
-  }
-}
+
 
 html{
   height: 100%;
@@ -107,11 +92,56 @@ section{
   }
 }
 
+// イベント・店舗 共用
+
+@mixin responsive-img-size {
+  img {
+    height: 200px;
+    width: 100%;
+  }
+  @media (min-width: $screen-sm-min) {
+    img {
+      height: 320px;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    img{
+      width: 420px;
+      height: 280px;
+    }
+  }
+}
+
+@mixin box-item {
+  background-color: white;
+  display: block;
+  margin-bottom: 0;
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 60px;
+  }
+}
+
+.img-area {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.text-area{
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
 
 #shop {
+  margin-top: 60px;
+  @include responsive-img-size;
   .shop-item { 
-    @include responsive-img-size;
-    margin-bottom: 5px;
+    @include box-item;
+  }
+  .shop-name {
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
   }
 }
 
@@ -124,6 +154,9 @@ section{
       bottom: 5px;
     }
   }
+  h3 {
+    border-bottom: solid 2px $line;
+  }
   .event-name {
     margin: {
       top: 10px;
@@ -133,21 +166,8 @@ section{
   .event-sub {
     margin: 2px 0;
   }
-  .img-area {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .text-area{
-    padding-top: 10px;
-    padding-bottom: 5px;
-  }
   .event-item {
-    background-color: white;
-    display: block;
-    margin-bottom: 0;
-    @media (min-width: $screen-sm-min) {
-      margin-bottom: 60px;
-    }
+    @include box-item;
   }
 }
 

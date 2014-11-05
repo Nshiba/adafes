@@ -1,12 +1,17 @@
 ---
 title: 参加店舗一覧
 ---
+section.top-img
+  .container
+    .main-title
+      h1 アダ街！学生祭 参加店
+      h2 足立区のステキなお店が参加します
+ 
 .container#shop
-  h1 参加店舗
   - data.shop.list.each do |v|
     .row.shop-item
-      h3 = v.name
-      a.col-md-4 href=v.url
-        img.img-responsive.img-rounded src=v.image
-      .col-md-8
+      a.col-md-4.img-area href=v.url
+        img.img-responsive src=v.image
+      .col-md-8.text-area
+        h3.shop-name = v.name
         p = v.text

@@ -22,11 +22,11 @@ section.top-img
       h2 足立区のお店で楽しもう
       = link_to "もっと見る", "shoplist.html", class: "btn btn-primary"
 
-    section#recruit
+    section#top-recruit
       h2 協賛
-      ul.list-group
+      .row
       - data.recruit.each do |v|
-        == link_to v.name, v.url, class: 'list-group-item', target: '_blank'
+        == link_to v.name, v.url, class: "col-md-4 recruit-item", target: "_blank"
 
     section#info
       p 2015年1月31日(土) 2月1日(日)
@@ -41,11 +41,3 @@ section.top-img
         / / li.list-group-item A店
         / / li.list-group-item B店
         / / li.list-group-item C店
-
-    / section#summary
-      / h2 お問い合わせ先
-      / p 000-000-0000
-      / h2 主催
-      / p アダ街！製作委員会
-      / h2 協賛企業
-      / p 赤芽(株)

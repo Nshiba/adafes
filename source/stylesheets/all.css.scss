@@ -145,6 +145,7 @@ section{
   padding-bottom: 5px;
 }
 
+// shoplist
 #shop {
   margin-top: 60px;
   @include responsive-img-size;
@@ -156,9 +157,11 @@ section{
       top: 10px;
       bottom: 10px;
     }
+    @include b-line-buttom;
   }
 }
 
+// envetlist
 #event {
   @include responsive-img-size;
   margin-top: 60px;

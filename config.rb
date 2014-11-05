@@ -77,17 +77,13 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
-end
 
-activate :bootstrap_navbar do |bootstrap_navbar|
-  bootstrap_navbar.bootstrap_version = '3.2.0.2'
+  activate :autoprefixer do |config|
+    config.browsers = ['last 2 versions', 'Explorer >= 9']
+    config.cascade  = false
+    config.inline   = true
+  end
 end
 
 # Asset pipeline
 require 'bootstrap-sass'
-
-activate :autoprefixer do |config|
-  config.browsers = ['last 2 versions', 'Explorer >= 9']
-  config.cascade  = false
-  config.inline   = true
-end

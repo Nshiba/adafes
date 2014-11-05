@@ -1,13 +1,19 @@
 @charset "utf-8";
-$base: white;
+$base: #B3D4FC;
 $back: #EBEEED;
 $nav: #32393D;
 $line: #EC6A47;
 
 @import "bootstrap";
-@import "compass";
+/* @import "compass"; */
 
+@mixin b-line-top {
+  border-top: solid 2px $line;
+}
 
+@mixin b-line-buttom {
+  border-bottom: solid 2px $line;
+}
 
 html{
   height: 100%;
@@ -36,7 +42,7 @@ section{
     &:hover {
       border-bottom: {
         width: 2px;
-        color: $nav;
+        color: $line;
         style: solid;
       }
     }
@@ -48,19 +54,25 @@ section{
 }
 
 // footer
-.footer {
+#footer {
   background: $nav;
-  font-size: 11px;
   width: 100%;
-  height: 30px;
-  text-align: center;
+  min-height: 200px;
+  color: white;
   p {
-    color: white;
-    padding: auto;
-    margin: auto;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-top: 15px;
+    @include b-line-top;
   }
 }
 
+#footer-info {
+  display: block;
+}
+
+// ページTOP
 .top-img {
   background: url('../images/a2.jpg') no-repeat fixed center 0 / cover transparent;
   display: block;
@@ -77,6 +89,8 @@ section{
   }
 }
 
+
+// トップページ
 #top {
   section {
     margin-top: 50px;
@@ -155,7 +169,7 @@ section{
     }
   }
   h3 {
-    border-bottom: solid 2px $line;
+    @include b-line-buttom;
   }
   .event-name {
     margin: {

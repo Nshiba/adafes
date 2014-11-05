@@ -59,13 +59,33 @@ section{
   width: 100%;
   min-height: 200px;
   color: white;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  p {
+    text-size: 12px;
+  }
+}
+
+#ASN {
   p {
     text-align: center;
-    font-size: 12px;
+  }
+}
+
+#copy {
+  p {
+    text-align: center;
     margin-top: 20px;
     padding-top: 15px;
     @include b-line-top;
   }
+}
+
+.footer-logo{
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 #footer-info {

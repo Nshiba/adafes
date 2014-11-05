@@ -86,4 +86,4 @@ configure :build do
 end
 
 # Asset pipeline
-require 'bootstrap-sass'
+# require 'bootstrap-sass'

@@ -126,9 +126,21 @@ section{
   .event-sub {
     margin: 2px 0;
   }
+  .img-area {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .text-area{
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
   .event-item {
-    margin: 15px 0 25px;
+    background-color: white;
     display: block;
+    margin-bottom: 0;
+    @media (min-width: $screen-sm-min) {
+      margin-bottom: 60px;
+    }
   }
 }
 

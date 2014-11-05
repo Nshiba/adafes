@@ -8,7 +8,7 @@ section.top-img
       h2 たくさんの魅力的な企画を用意してお待ちしています
 
 .container#event
-  - data.event.list.each do |v|
+  - data.event.each do |v|
     .row.event-item
       .col-sm-4.col-md-4.img-area
         img.img-responsive src=v.image

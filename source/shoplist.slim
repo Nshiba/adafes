@@ -8,7 +8,7 @@ section.top-img
       h2 足立区のステキなお店が参加します
  
 .container#shop
-  - data.shop.list.each do |v|
+  - data.shop.each do |v|
     .row.shop-item
       a.col-md-4.img-area href=v.url
         img.img-responsive src=v.image

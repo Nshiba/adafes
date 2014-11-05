@@ -1,13 +1,18 @@
 ---
 title: イベント一覧
 ---
+section.top-img
+  .container
+    .main-title
+      h1 アダ街！学生祭 イベント
+      h2 たくさんの魅力的な企画を用意してお待ちしています
+
 .container#event
-  h1 イベント一覧
   - data.event.list.each do |v|
     .row.event-item
-      .col-md-4.img-area
+      .col-sm-4.col-md-4.img-area
         img.img-responsive src=v.image
-      .col-md-8.text-area
+      .col-sm-8.col-md-8.text-area
         .event-sub
           h4 = v.sub
         .evnet-name

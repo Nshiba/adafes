@@ -8,11 +8,17 @@ $nav: #32393D;
 
 @mixin responsive-img-size {
   img {
-    width: 420px;
     height: 200px;
+    width: 100%;
   }
   @media (min-width: $screen-sm-min) {
     img {
+      height: 320px;
+    }
+  }
+  @media (min-width: $screen-md-min) {
+    img{
+      width: 420px;
       height: 280px;
     }
   }
@@ -111,6 +117,7 @@ section{
 
 #event {
   @include responsive-img-size;
+  margin-top: 60px;
   h1,h2,h3,h4,h5,h6 {
     margin: {
       top: 5px;

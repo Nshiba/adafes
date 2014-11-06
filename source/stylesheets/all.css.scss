@@ -130,7 +130,8 @@ section{
 
 @mixin responsive-img-size {
   img {
-    height: 200px;
+    max-height: 300px;
+    height: 70%;
     width: 100%;
   }
   @media (min-width: $screen-sm-min) {

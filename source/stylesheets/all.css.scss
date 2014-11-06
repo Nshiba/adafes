@@ -171,6 +171,7 @@ section{
   @include responsive-img-size;
   .shop-item { 
     @include box-item;
+    position: relative;
   }
   .shop-name {
     margin: {
@@ -178,6 +179,32 @@ section{
       bottom: 10px;
     }
     @include b-line-buttom;
+    .text-area {
+      margin: 5px auto;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    .icon-area {
+      text-align: center;
+    }
+    .icon-area a {
+      margin: 0 5px;
+    }
+  }
+  @media (min-width: $screen-sm-min) {
+    .icon-area {
+      display: block;
+      position: absolute;
+      bottom: 20px;
+      right: 15px;
+    }
+    .icon-area {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .icon-area a {
+      margin: 0 10px;
+    }
   }
 }
 

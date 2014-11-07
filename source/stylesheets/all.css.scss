@@ -256,6 +256,11 @@ section{
     @include box-item;
     position: relative;
   }
+  .event-img {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
   .logo-area {
     @media (min-width: $screen-md-min) {
       text-align: left;

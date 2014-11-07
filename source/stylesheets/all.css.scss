@@ -81,7 +81,7 @@ section{
       color: $line;
     }
   }
-  .footer-logo{
+  .footer-share{
     margin-right: 10px;
     margin-left: 10px;
     background: white;
@@ -187,7 +187,7 @@ section{
   padding-bottom: 5px;
 }
 
-.logo-area {
+.share-area {
   @media (min-width: $screen-md-min) {
     text-align: left;
     position: absolute;
@@ -246,7 +246,7 @@ section{
       margin: 5px auto;
     }
   }
-  .logo {
+  .share {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -289,7 +289,7 @@ section{
       opacity: 0.8;
     }
   }
-  .logo {
+  .share {
     border-radius: 50%;
     width: 50px;
     height: 50px;

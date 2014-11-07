@@ -23,11 +23,16 @@
       = link_to "もっと見る", "shoplist.html", class: "btn btn-primary"
 
     section#top-sponsers
-      h2 sponsers
-      ul
-        - data.sponsers.each do |v|
-          li.col-md-4
-            == link_to v.name, v.url, target: "_blank"
+      h2 協賛
+      .row
+        ul
+          - data.sponsers.each do |v|
+            li.col-md-4.col-sm-4
+              - unless v.img.nil?
+                == link_to v.url, target: "_blank" do
+                  img src=v.img
+              - else
+                == link_to v.name, v.url, target: "_blank"
 
     / section#shop
       / h1 参加店舗

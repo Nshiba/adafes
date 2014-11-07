@@ -8,11 +8,11 @@ $line: #EC6A47;
 /* @import "compass"; */
 
 @mixin b-line-top {
-  border-top: solid 2px $line;
+  box-shadow: inset 0 2px 0 0 $line;
 }
 
 @mixin b-line-buttom {
-  border-bottom: solid 2px $line;
+  box-shadow: inset 0 -2px 0 0 $line;
 }
 
 html{
@@ -55,11 +55,7 @@ section{
 #nav-right {
   a {
     &:hover {
-      border-bottom: {
-        width: 2px;
-        color: $line;
-        style: solid;
-      }
+      @include b-line-buttom;
     }
   }
 }
@@ -83,6 +79,16 @@ section{
     color: white;
     &:hover{
       color: $line;
+    }
+  }
+  .footer-logo{
+    margin-right: 10px;
+    margin-left: 10px;
+    background: white;
+    &:hover{
+      border: solid 2px $line;
+      margin: -2px 9px;
+      background-color: white;
     }
   }
 }
@@ -110,15 +116,6 @@ section{
     margin-top: 20px;
     padding-top: 15px;
     @include b-line-top;
-  }
-}
-
-.footer-logo{
-  margin-right: 10px;
-  margin-left: 10px;
-  background: white;
-  &:hover{
-    background: $line;
   }
 }
 

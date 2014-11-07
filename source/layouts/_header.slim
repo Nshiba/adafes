@@ -1,10 +1,12 @@
-nav.navbar.navbar-default role="navigation"
+nav.navbar.navbar-default.navbar-fixed-top role="navigation"
   .container-fluid
     //<!-- Brand and toggle get grouped for better mobile display -->
     .navbar-header
       button.navbar-toggle type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
         span.sr-only Toggle navigation
-        span.glyphicon.glyphicon-arrow-down
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
       == link_to "アダ街！学生祭", '/index.html', :class => 'navbar-brand'
     .collapse.navbar-collapse id="bs-example-navbar-collapse-1"
       ul.nav.navbar-nav.navbar-right#nav-right

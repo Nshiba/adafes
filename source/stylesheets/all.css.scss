@@ -33,7 +33,7 @@ li {
 header {
   font-size: 14px;
   font-weight: bold;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  @include b-line-buttom;
 }
 
 section{
@@ -61,7 +61,17 @@ section{
 }
 
 .navbar {
+  opacity: 0.7;
+  transition: all 1s ease;
+  &:hover{
+    opacity: 1.0;
+  }
   margin: 0 0;
+  @include b-line-buttom;
+}
+
+.navbar-brand {
+  font-size: 110%;
 }
 
 // footer

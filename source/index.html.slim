@@ -1,7 +1,7 @@
 ---
 ---
 
-section.top-img
+.top-img
   .container
     .main-title
       h1 アダ街！学生祭
@@ -22,11 +22,12 @@ section.top-img
       h2 足立区のお店で楽しもう
       = link_to "もっと見る", "shoplist.html", class: "btn btn-primary"
 
-    section#top-recruit
-      h2 協賛
-      .row
-      - data.recruit.each do |v|
-        == link_to v.name, v.url, class: "col-md-4 recruit-item", target: "_blank"
+    section#top-sponsers
+      h2 sponsers
+      ul
+        - data.sponsers.each do |v|
+          li.col-md-4
+            == link_to v.name, v.url, target: "_blank"
 
     / section#shop
       / h1 参加店舗

@@ -37,7 +37,18 @@ header {
 }
 
 section{
+  margin-top: 50px;
+  margin-bottom: 50px;
   overflow: auto;
+}
+
+@mixin box-item {
+  background-color: white;
+  display: block;
+  margin-bottom: 30px;
+  @media (min-width: $screen-sm-min) {
+    margin-bottom: 60px;
+  }
 }
 
 // header
@@ -135,18 +146,17 @@ section{
 
 // トップページ
 #top {
-  section {
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  #top-recruit {
-    text-align: center;
-    display: block;
-    margin: 20px 0;
-  }
-  .recruit-item {
+}
+
+#top-sponsers {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 150px;
+  ul {
+    @include box-item;
     margin-top: 30px;
-  }
+  } 
 }
 
 // イベント・店舗 共用
@@ -167,15 +177,6 @@ section{
       width: 420px;
       height: 280px;
     }
-  }
-}
-
-@mixin box-item {
-  background-color: white;
-  display: block;
-  margin-bottom: 30px;
-  @media (min-width: $screen-sm-min) {
-    margin-bottom: 60px;
   }
 }
 

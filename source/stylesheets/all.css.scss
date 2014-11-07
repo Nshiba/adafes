@@ -187,6 +187,47 @@ section{
   padding-bottom: 5px;
 }
 
+.logo-area {
+  @media (min-width: $screen-md-min) {
+    text-align: left;
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+  }
+  * {
+    margin: 0 10px;
+    transition: all 1s ease;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .icon-area {
+    text-align: center;
+  }
+  .icon-area a {
+    margin: 0 5px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .icon-area {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 15px;
+  }
+  .icon-area {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  .icon-area a {
+    margin: 0 10px;
+  }
+}
+
 // shoplist
 #shop {
   margin-top: 60px;
@@ -205,27 +246,14 @@ section{
       margin: 5px auto;
     }
   }
-  @media (max-width: $screen-xs-max) {
-    .icon-area {
-      text-align: center;
-    }
-    .icon-area a {
-      margin: 0 5px;
-    }
-  }
-  @media (min-width: $screen-sm-min) {
-    .icon-area {
-      display: block;
-      position: absolute;
-      bottom: 20px;
-      right: 15px;
-    }
-    .icon-area {
-      margin-left: 5px;
-      margin-right: 5px;
-    }
-    .icon-area a {
-      margin: 0 10px;
+  .logo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    transition: all 1s ease;
+    &:hover {
+      transform: rotate(360deg);
     }
   }
 }
@@ -234,6 +262,10 @@ section{
 #event {
   @include responsive-img-size;
   margin-top: 60px;
+  .event-item {
+    @include box-item;
+    position: relative;
+  }
   h1,h2,h3,h4,h5,h6 {
     margin: {
       top: 5px;
@@ -252,28 +284,9 @@ section{
   .event-sub {
     margin: 2px 0;
   }
-  .event-item {
-    @include box-item;
-    position: relative;
-  }
   .event-img {
     &:hover {
       opacity: 0.8;
-    }
-  }
-  .logo-area {
-    @media (min-width: $screen-md-min) {
-      text-align: left;
-      position: absolute;
-      bottom: 5px;
-      right: 20px;
-    }
-    * {
-      margin: 0 10px;
-      transition: all 1s ease;
-      &:hover {
-        transform: rotate(360deg);
-      }
     }
   }
   .logo {

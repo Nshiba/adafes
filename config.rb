@@ -74,9 +74,11 @@ configure :build do
 
   # Use relative URLs
   activate :relative_assets
+  activate :directory_indexes
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  set :relative_links, true
 
   activate :autoprefixer do |config|
     config.browsers = ['last 2 versions', 'Explorer >= 9']

@@ -12,12 +12,13 @@ title: 参加店舗一覧
     .shop-item
       .row
         a.col-sm-4.col-md-4.img-area href=v.url
-          img.img-responsive src=v.image
+          == image_tag v.image, class: "img-responsive"
         .col-sm-8.col-md-8.text-area
           h3.shop-name = v.name
           p = v.text
         .icon-area
             == link_to "MAP", "#", class: "btn btn-primary"
             == link_to "MAP", "#", class: "btn btn-primary"
-            img.share src="./images/share/t.png"
-            img.share src="./images/share/f.jpg"
+            == image_tag "/images/share/t.png", class: "share"
+            == image_tag "/images/share/f.jpg", class: "share"
+

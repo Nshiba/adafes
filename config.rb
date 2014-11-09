@@ -53,13 +53,13 @@ end
 require 'slim'
 Slim::Engine.disable_option_validator!
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'css'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'js'
 
 set :images_dir, 'images'
 
-set :slim, { :pretty => true, :sort_attrs => true, :format => :html5 }
+set :slim, { pretty: true, sort_attrs: true, format: :html5 }
 
 # Build-specific configuration
 configure :build do
@@ -86,6 +86,3 @@ configure :build do
     config.inline   = true
   end
 end
-
-# Asset pipeline
-# require 'bootstrap-sass'

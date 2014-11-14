@@ -41,16 +41,13 @@ require 'slim'
 Slim::Engine.disable_option_validator!
 
 set :css_dir, 'css'
-
 set :js_dir, 'js'
-
 set :images_dir, 'images'
 
-# source/about/template.html.erb が存在することを想定
 data.shop.each do |list|
   proxy "/shop/#{list.name.gsub(/\s/,'')}.html",
   "/shop/template.html",
-    locals: { name: list.name, list: list }
+    locals: { shop: list }
 end
 
 set :slim, { pretty: true, sort_attrs: true, format: :html5 }

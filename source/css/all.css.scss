@@ -39,7 +39,6 @@ header {
 section{
   margin-top: 50px;
   margin-bottom: 50px;
-  overflow: auto;
 }
 
 @mixin box-item {
@@ -286,7 +285,7 @@ section{
   @include responsive-img-size;
   .shop-item-box {
     margin-top: 20px;
-    min-height: 570px;
+    height: 600px;
   }
   .shop-item { 
     @include box-item;

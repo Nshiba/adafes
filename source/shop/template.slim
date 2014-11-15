@@ -4,4 +4,10 @@
 #detail
   .container
     h1 = shop.name
-    p = shop
+    .row
+      .com-md-4
+        - if shop.image.present?
+          == image_tag shop.image, class: "img-responsive"
+      .text.col-md-4
+        p = shop.text
+

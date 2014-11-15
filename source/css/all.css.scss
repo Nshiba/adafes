@@ -22,7 +22,7 @@ body {
   /* background-color: white; */
   background-color: $back;
   height: 100%;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.8em;
 }
 
@@ -264,8 +264,8 @@ section{
   .icon-area {
     display: block;
     position: absolute;
-    bottom: 20px;
-    right: 15px;
+    top: 3px;
+    right: 5px;
   }
   .icon-area {
     margin-left: 5px;
@@ -278,8 +278,16 @@ section{
 
 // shoplist
 #shop {
-  margin-top: 60px;
+  margin: 0 15px;
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  padding: auto 20px;
   @include responsive-img-size;
+  .shop-item-box {
+    margin-top: 20px;
+    min-height: 570px;
+  }
   .shop-item { 
     @include box-item;
     position: relative;
@@ -296,13 +304,16 @@ section{
   }
   .share {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
     transition: all 1s ease;
     &:hover {
       transform: rotate(360deg);
     }
+  }
+  p {
+    opacity: 0.8;
   }
 }
 
@@ -344,11 +355,23 @@ section{
   }
 }
 
+#detail {
+  padding-top: 70px;
+  max-width: 100%;
+  @media (min-width: $screen-sm-min) {
+    img {
+      position: center;
+      max-width: 50%;
+      max-height: 50%;
+    }
+  }
+}
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm-min) {
   body {
     background-color: $back;
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 

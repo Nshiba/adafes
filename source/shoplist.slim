@@ -6,19 +6,15 @@ title: 参加店舗一覧 - アダ街！学生祭
     .main-title
       h1 アダ街！学生祭 参加店
       h2 足立区のステキなお店が参加します
- 
-.container#shop
-  - data.shop.each do |v|
-    .shop-item
-      .row
-        a.col-sm-4.col-md-4.img-area href=v.url
-          == image_tag v.image, class: "img-responsive"
-        .col-sm-8.col-md-8.text-area
-          h3.shop-name = v.name
-          p = v.text
-        .icon-area
-            == link_to "MAP", "#", class: "btn btn-primary"
-            == link_to "MAP", "#", class: "btn btn-primary"
-            == image_tag "/images/share/t.png", class: "share"
-            == image_tag "/images/share/f.jpg", class: "share"
 
+section#shop
+  .container
+    .row
+      - data.shop.each do |v|
+        .shop-item-box.col-md-4
+          .shop-item
+            a.img-area href=v.url
+              == image_tag v.image, class: "img-responsive"
+            .text-area
+              h3.shop-name = v.name
+              p = v.text

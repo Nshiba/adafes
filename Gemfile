@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 # source 'http://gems.github.com'
-ruby '2.1.2'
+ruby '2.1.5'
 
 gem "middleman", "~>3.3.6"
 gem "slim", "~> 2.0"

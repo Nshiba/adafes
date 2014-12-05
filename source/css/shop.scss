@@ -10,13 +10,25 @@
     line-height: 26px;
   }
   table {
-    margin-top: 70px;
+    margin: 30px;
+  }
+  .gmap {
+    max-width: 720px;
+    margin: 20px auto;
+  }
+  iframe {
+    width: 700px;
+    height: 300px;
   }
   @media (max-width: $screen-sm-min) {
     margin: 50px auto 5px;
     padding: 5px 2px;
     table{
       margin-top: 30px;
+    }
+    iframe{
+      max-width: 100%;
+      max-height: 50%;
     }
   }
 }

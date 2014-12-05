@@ -6,6 +6,7 @@
   address: ダミー
   holiday: 月曜日
   hours: "11:00〜14:30 18:00〜23:00"
+  gmap: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3238.089608726822!2d139.80608432408138!3d35.74860221618717!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7026ee7b68f19725!2z5YyX5Y2D5L2P6aeF77yI5p2x5Lqs77yJ!5e0!3m2!1sja!2sjp!4v1417768624795"
 
 - url: '#'
   image: /images/shop/j'scurry.jpg

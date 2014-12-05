@@ -1,14 +1,14 @@
 ---
 ---
 - content_for(:title, "#{shop.name}")
-#detail
-  .container
-    h1 = shop.name
+.container
+  section#shoppage
     .row
-      .com-md-4
+      .col-md-8
         - if shop.image.present?
           == image_tag shop.image, class: "img-responsive"
-      .text.col-md-4
+      .col-md-4
+        h1 = shop.name
         p = shop.text
     table.table
       tbody
@@ -18,6 +18,9 @@
         tr
           th ジャンル
           td = shop.kind
+        tr
+          th ホームページ
+          td = shop.homepage
         tr
           th 住所
           td = shop.address

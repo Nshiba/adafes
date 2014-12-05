@@ -10,4 +10,20 @@
           == image_tag shop.image, class: "img-responsive"
       .text.col-md-4
         p = shop.text
-
+    table.table
+      tbody
+        tr
+          th 店名
+          td = shop.name
+        tr
+          th ジャンル
+          td = shop.kind
+        tr
+          th 住所
+          td = shop.address
+        tr
+          th 営業時間
+          td = shop.hours
+        tr
+          th 定休日
+          td = shop.holiday

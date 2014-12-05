@@ -1,0 +1,42 @@
+// shoplist
+#shop {
+  margin: 0 15px;
+  background-color: white;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  padding: auto 20px;
+  @include responsive-img-size;
+  .shop-item-box {
+    margin-top: 20px;
+    height: 550px;
+  }
+  .shop-item { 
+    @include box-item;
+    position: relative;
+  }
+  .shop-name {
+    font-size: 150%;
+    color: #636363;
+    margin: {
+      top: 10px;
+      bottom: 10px;
+    }
+    @include b-line-buttom;
+    .text-area {
+      margin: 5px auto;
+    }
+  }
+  .share {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    transition: all 1s ease;
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+  p {
+    opacity: 0.8;
+  }
+}

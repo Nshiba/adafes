@@ -1,0 +1,35 @@
+// トップページ
+#top-sponsers {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  padding-bottom: 100px;
+  margin-bottom: 50px;
+  background-color: white;
+  .row {
+    margin-right: 0;
+  }
+  h2 {
+    font-weight: bold;
+  }
+  ul {
+    @include box-item;
+    margin-top: 70px;
+    margin-left: -20px;
+  }
+  li {
+    text-align: center;
+    margin-top: 20px;
+    a {
+      font-size: 20px;
+      color: black;
+    }
+  }
+  @media (max-width: $screen-xs-max) {
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    ul {
+      margin-top: 40px;
+    }
+  }
+}

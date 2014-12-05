@@ -16,5 +16,5 @@ section#shop
             a.img-area href=v.url
               == image_tag v.image, class: "img-responsive"
             .text-area
-              h3.shop-name = v.name
+              = link_to v.name, "shop/#{ v.name }.html", class: "shop-name"
               p = v.text

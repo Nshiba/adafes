@@ -1,0 +1,47 @@
+// footer
+#footer {
+  background: $nav;
+  width: 100%;
+  min-height: 200px;
+  color: white;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover{
+      color: $line;
+    }
+  }
+  .footer-share{
+    margin-right: 10px;
+    margin-left: 10px;
+    background: white;
+    &:hover{
+      border: solid 2px $line;
+      margin: -2px 9px;
+      background-color: white;
+    }
+  }
+}
+
+#footer-info {
+  margin-top: 50px;
+  display: block;
+  text-align: center;
+  @media (min-width: $screen-md-min) {
+    margin-top: 120px;
+    text-align: left;
+  }
+}
+
+#copy {
+  p {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    @include b-line-top;
+  }
+}

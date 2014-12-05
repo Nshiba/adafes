@@ -14,17 +14,6 @@ $line: #EC6A47;
 @import "shoplist";
 @import "eventlist";
 
-#asn {
-  padding-top: 20px;
-  h2 {
-    text-align: center;
-  }
-}
-
-#asn-share {
-  text-align: right;
-}
-
 /* Small devices (tablets, 768px and up) */
 @media (min-width: $screen-sm-min) {
   body {

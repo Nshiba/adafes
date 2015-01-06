@@ -46,8 +46,7 @@ set :images_dir, 'images'
 
 data.shop.each do |list|
   proxy "/shop/#{list.name.gsub(/\s/,'')}.html",
-  "/shop/template.html",
-    locals: { shop: list }
+  "/shop/template.html", locals: { shop: list }, ignore: true
 end
 
 set :slim, { pretty: true, sort_attrs: true, format: :html5 }

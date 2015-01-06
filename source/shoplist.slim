@@ -13,7 +13,7 @@ section#shop
       - data.shop.each do |v|
         .shop-item-box.col-md-4
           .shop-item
-            a.img-area href=v.url
+            a.img-area href="shop/#{ v.name }.html"
               == image_tag v.image, class: "img-responsive"
             .text-area
               = link_to v.name, "shop/#{ v.name }.html", class: "shop-name"

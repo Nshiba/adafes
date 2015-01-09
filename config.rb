@@ -44,9 +44,9 @@ set :css_dir, 'css'
 set :js_dir, 'js'
 set :images_dir, 'images'
 
-data.shop.each do |list|
-  proxy "/shop/#{list.name.gsub(/\s/,'')}.html",
-  "/shop/template.html", locals: { shop: list }, ignore: true
+data.shop.each do |v|
+  proxy "/shop/#{v.name.gsub(/\s/,'')}.html",
+  "/shop/template.html", locals: { shop: v }, ignore: true
 end
 
 set :slim, { pretty: true, sort_attrs: true, format: :html5 }

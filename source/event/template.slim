@@ -2,21 +2,25 @@
 ---
 - content_for(:title, "#{event.name}")
 .container
-  section#eventpage
+  section#event
     .row
       .col-md-8
         - if event.image.present?
           == image_tag event.image, class: "img-responsive"
       .col-md-4
-        h1 = event.name
-        p = event.text
-    table.table
-      tbody
-        tr
-          th 店名
-          td = event.name
-        tr
-          th ホームページ
-        tr
-    .gmap
-      iframe src=event.gmap frameborder="0" style="border:0"
+        .event-name = event.name
+
+        .event-intro-text = event.text
+    .event-content
+      h2 イベント内容
+      p = event.text
+    .event-local
+      h2 会場
+      = link_to event.local, "/shop/#{ event.localurl }.html"
+    .event-schedule
+      h2 日程
+      ul
+        - event.schedule.each do |v|
+          li = v
+    .event-pic
+    .event-free

@@ -9,7 +9,7 @@
 /vendor/bundle
 
 # Ignore the build directory
-/build
+# /build
 
 # Ignore cache
 /.sass-cache

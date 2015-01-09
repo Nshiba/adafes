@@ -5,12 +5,12 @@ $nav: #32393D;
 $line: #EC6A47;
 
 @import "bootstrap";
-@import "base";
-@import "footer";
-@import "header";
-@import "pagetop";
-@import "top";
-@import "listpage";
-@import "shoplist";
-@import "eventlist";
-@import "shop"
+@import "_base";
+@import "_footer";
+@import "_header";
+@import "_pagetop";
+@import "_top";
+@import "_listpage";
+@import "_shoplist";
+@import "_eventlist";
+@import "_shop"

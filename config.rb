@@ -45,7 +45,7 @@ set :js_dir, 'js'
 set :images_dir, 'images'
 
 data.shop.each do |v|
-  proxy "/shop/#{v.name.gsub(/\s/,'')}.html",
+  proxy "/shop/#{ v.url }.html",
   "/shop/template.html", locals: { shop: v }, ignore: true
 end
 

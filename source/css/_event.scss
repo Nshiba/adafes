@@ -1,0 +1,38 @@
+#event {
+  background-color: white;
+  margin: 60px auto 10px;
+  padding: 20px 20px;
+  @media (max-width: $screen-sm-min) {
+    margin: 50px auto 5px;
+    padding: 5px 2px;
+  }
+}
+
+
+.event-a {
+  max-width: 700px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.event-name {
+  font-size: 24px;
+  border-bottom: solid 1px #eee;
+}
+
+.envet-intro-text {
+  border-top: 5px;
+  line-height: 26px;
+}
+
+.event-local {
+  a {
+    font-size: 20px;
+    color: #32393D;
+  }
+}
+
+.table{
+  max-width: 500px;
+  margin: 0 auto;
+}

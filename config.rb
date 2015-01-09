@@ -49,6 +49,11 @@ data.shop.each do |v|
   "/shop/template.html", locals: { shop: v }, ignore: true
 end
 
+data.event.each do |v|
+  proxy "/event/#{ v.url }.html",
+  "/event/template.html", locals: { event: v }, ignore: true
+end
+
 set :slim, { pretty: true, sort_attrs: true, format: :html5 }
 
 # Build-specific configuration

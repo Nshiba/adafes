@@ -1,0 +1,33 @@
+---
+---
+- content_for(:title, "#{event.name}")
+.container
+  section#event
+    .row
+      .col-md-8
+        - if event.image.present?
+          == image_tag event.image, class: "img-responsive"
+      .col-md-4
+        .event-name = event.name
+
+        .event-intro-text = event.text
+    .event-a
+      .event-content
+        h2 イベント内容
+        p = event.text
+      .event-local
+        h2 会場
+        / .row
+          / = link_to "#{image_tag event.localimage, class: "img-responsive eventlist-img col-md-4"}", "/event/#{ event.localurl }.html" 
+          / .col-md-4.event-shop-url
+        = link_to event.local, "/shop/#{ event.localurl }.html"
+      .event-schedule
+        h2 日程
+        table.table
+          tbody
+          - event.schedule.each.with_index(1) do |v,i|
+            tr
+              th = "#{i}回目"
+              td = v
+      .event-pic
+      .event-free

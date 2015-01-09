@@ -1,37 +1,38 @@
-// envetlist
-#event {
+#eventlist {
   @include responsive-img-size;
   margin-top: 60px;
   .event-item {
     @include box-item;
     position: relative;
   }
-  h1,h2,h3,h4,h5,h6 {
-    margin: {
-      top: 5px;
-      bottom: 5px;
-    }
-  }
-  h3 {
-    @include b-line-buttom;
-  }
-  .event-name {
-    margin: {
-      top: 10px;
-      bottom: 10px;
-    }
-  }
-  .event-sub {
-    margin: 2px 0;
-  }
-  .event-img {
-    &:hover {
-      opacity: 0.8;
-    }
-  }
   .share {
     border-radius: 50%;
     width: 50px;
     height: 50px;
+  }
+}
+
+.eventlist-name {
+  font-size: 20px;
+  margin: {
+    top: 10px;
+    bottom: 10px;
+  }
+  color: #32393D;
+  @include b-line-buttom;
+}
+
+.eventlist-name-sub {
+  margin: {
+    top: 5px;
+    bottom: 5px;
+  }
+  font-size: 18px;
+  margin: 2px 0;
+}
+
+.eventlist-img {
+  &:hover {
+    opacity: 0.8;
   }
 }

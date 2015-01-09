@@ -1,0 +1,22 @@
+---
+---
+- content_for(:title, "#{event.name}")
+.container
+  section#eventpage
+    .row
+      .col-md-8
+        - if event.image.present?
+          == image_tag event.image, class: "img-responsive"
+      .col-md-4
+        h1 = event.name
+        p = event.text
+    table.table
+      tbody
+        tr
+          th 店名
+          td = event.name
+        tr
+          th ホームページ
+        tr
+    .gmap
+      iframe src=event.gmap frameborder="0" style="border:0"

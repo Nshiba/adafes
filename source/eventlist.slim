@@ -7,16 +7,14 @@ title: イベント一覧 - アダ街！学生祭
       h1 アダ街！学生祭 イベント
       h2 たくさんの魅力的な企画を用意してお待ちしています
 
-.container#event
+.container#eventlist
   - data.event.each do |v|
     .row.event-item
       .col-sm-4.col-md-4.img-area
-        == image_tag v.image, class: "img-responsive event-img"
+        = link_to "#{image_tag v.image, class: "img-responsive eventlist-img"}", "/event/#{ v.url }.html" 
       .col-sm-8.col-md-8.text-area
-        .event-sub
-          h4 = v.sub
-        .evnet-name
-          h3 = v.name
+        h4.eventlist-name-sub = v.sub
+        = link_to v.name, "/event/#{ v.url }.html", class: "eventlist-name"
         p = v.text
       .share-area
 
